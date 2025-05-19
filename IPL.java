@@ -44,10 +44,10 @@ public class IPL {
                 teams.get(teamIndex).add(selectedPlayer);
 
 
-                System.out.printf(TEAM_NAMES.get(teamIndex) + " selected:");
+                System.out.println(TEAM_NAMES.get(teamIndex) + " selected:");
                 
-                System.out.printf("Player", selectedPlayer.getName());
-                System.out.printf("Jersey", selectedPlayer.getJerseyNumber());
+                System.out.println("Player", selectedPlayer.getName());
+                System.out.println("Jersey", selectedPlayer.getJerseyNumber());
                 
 
                 System.out.println("\nPress Enter to continue...");
@@ -66,11 +66,11 @@ public class IPL {
                 teams.get(teamIndex).add(selectedPlayer);
 
 
-                System.out.printf( TEAM_NAMES.get(teamIndex) + " selected:");
+                System.out.println( TEAM_NAMES.get(teamIndex) + " selected:");
 
-                System.out.printf("Player", selectedPlayer.getName());
-                System.out.printf("Country", selectedPlayer.getCountry());
-                System.out.printf("Jersey", selectedPlayer.getJerseyNumber());
+                System.out.println("Player", selectedPlayer.getName());
+                System.out.println("Country", selectedPlayer.getCountry());
+                System.out.println("Jersey", selectedPlayer.getJerseyNumber());
 
                 System.out.println("\nPress Enter to continue...");
                 scanner.nextLine();
@@ -153,7 +153,7 @@ public class IPL {
             System.out.println(" Draft results:IPL 2024 ");
         for (int i = 0; i < teams.size(); i++) {
             
-            System.out.println(Team_names.get(i) + "Squad");
+            System.out.println(TEAM_NAMES.get(i) + "Squad");
             List<Player> team = teams.get(i);
             List<Player> indians = new ArrayList<>();
             List<Player> foreigners = new ArrayList<>();
