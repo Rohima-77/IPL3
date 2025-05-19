@@ -2,7 +2,7 @@ package cricket.ipl;
 
 import java.util.*;
 
-public class IPLDraftSystem {
+public class IPL {
     private static final List<String> TEAM_NAMES = Arrays.asList(
             "Chennai Super Kings",
             "Mumbai Indians",
