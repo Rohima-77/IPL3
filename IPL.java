@@ -14,10 +14,7 @@ public class IPL {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("\n╔════════════════════════════════════════════╗");
-        System.out.println("║       INDIAN PREMIER LEAGUE - DRAFT 2026     ║");
-        System.out.println("╚════════════════════════════════════════════╝\n");
-
+        System.out.println("Indian premier league:2026");
         List<Player> indianPlayers = createIndianPlayers();
         List<Player> foreignPlayers = createForeignPlayers();
 
@@ -38,20 +35,20 @@ public class IPL {
                                      List<Player> foreignPlayers) {
         // Draft 7 Indian players per team (35 total)
         for (int round = 0; round < 7; round++) {
-            System.out.println("\n════════════════════════════════════");
-            System.out.println("       INDIAN PLAYERS DRAFT ROUND " + (round + 1));
-            System.out.println("════════════════════════════════════");
+
+            System.out.println("INDIAN PLAYERS DRAFT ROUND " + (round + 1));
+            
 
             for (int teamIndex = 0; teamIndex < 5; teamIndex++) {
                 Player selectedPlayer = indianPlayers.remove(0);
                 teams.get(teamIndex).add(selectedPlayer);
 
-                System.out.println("\n┌────────────────────────────────────┐");
-                System.out.printf("│ %-34s │\n", TEAM_NAMES.get(teamIndex) + " selected:");
-                System.out.println("├────────────────────────────────────┤");
-                System.out.printf("│ %-15s: %-15s │\n", "Player", selectedPlayer.getName());
-                System.out.printf("│ %-15s: %-15s │\n", "Jersey", selectedPlayer.getJerseyNumber());
-                System.out.println("└────────────────────────────────────┘");
+
+                System.out.printf(TEAM_NAMES.get(teamIndex) + " selected:");
+                
+                System.out.printf("Player", selectedPlayer.getName());
+                System.out.printf("Jersey", selectedPlayer.getJerseyNumber());
+                
 
                 System.out.println("\nPress Enter to continue...");
                 scanner.nextLine();
@@ -60,21 +57,20 @@ public class IPL {
 
         // Draft 5 Foreign players per team (25 total)
         for (int round = 0; round < 5; round++) {
-            System.out.println("\n════════════════════════════════════");
-            System.out.println("     FOREIGN PLAYERS DRAFT ROUND " + (round + 1));
-            System.out.println("════════════════════════════════════");
+            
+            System.out.println(" FOREIGN PLAYERS DRAFT ROUND " + (round + 1));
+            
 
             for (int teamIndex = 0; teamIndex < 5; teamIndex++) {
                 Player selectedPlayer = foreignPlayers.remove(0);
                 teams.get(teamIndex).add(selectedPlayer);
 
-                System.out.println("\n┌────────────────────────────────────┐");
-                System.out.printf("│ %-34s │\n", TEAM_NAMES.get(teamIndex) + " selected:");
-                System.out.println("├────────────────────────────────────┤");
-                System.out.printf("│ %-15s: %-15s │\n", "Player", selectedPlayer.getName());
-                System.out.printf("│ %-15s: %-15s │\n", "Country", selectedPlayer.getCountry());
-                System.out.printf("│ %-15s: %-15s │\n", "Jersey", selectedPlayer.getJerseyNumber());
-                System.out.println("└────────────────────────────────────┘");
+
+                System.out.printf( TEAM_NAMES.get(teamIndex) + " selected:");
+
+                System.out.printf("Player", selectedPlayer.getName());
+                System.out.printf("Country", selectedPlayer.getCountry());
+                System.out.printf("Jersey", selectedPlayer.getJerseyNumber());
 
                 System.out.println("\nPress Enter to continue...");
                 scanner.nextLine();
@@ -154,15 +150,10 @@ public class IPL {
     }
 
     private static void displayFinalResults(List<List<Player>> teams) {
-        System.out.println("\n╔════════════════════════════════════════════╗");
-        System.out.println("║           DRAFT RESULTS - IPL 2024          ║");
-        System.out.println("╚════════════════════════════════════════════╝");
-
+            System.out.println(" Draft results:IPL 2024 ");
         for (int i = 0; i < teams.size(); i++) {
-            System.out.println("\n╔════════════════════════════════════════════╗");
-            System.out.printf("║ %-42s ║\n", TEAM_NAMES.get(i) + " Squad");
-            System.out.println("╠════════════════════════════════════════════╣");
-
+            
+            System.out.println(Team_names.get(i) + "Squad");
             List<Player> team = teams.get(i);
             List<Player> indians = new ArrayList<>();
             List<Player> foreigners = new ArrayList<>();
@@ -175,18 +166,18 @@ public class IPL {
                 }
             }
 
-            System.out.println("║            INDIAN PLAYERS (7)             ║");
-            System.out.println("╠════════════════════════════════════════════╣");
+            System.out.println(" INDIAN PLAYERS (7) ");
+
             for (int j = 0; j < 7; j++) {
-                System.out.printf("║ %-2d. %-35s ║\n", j+1, indians.get(j));
+                System.out.printf(j+1, indians.get(j));
             }
 
-            System.out.println("║           FOREIGN PLAYERS (5)            ║");
-            System.out.println("╠════════════════════════════════════════════╣");
+            System.out.println("FOREIGN PLAYERS (5)");
+
             for (int j = 0; j < 5; j++) {
-                System.out.printf("║ %-2d. %-35s ║\n", j+8, foreigners.get(j));
+                System.out.printf(j+8, foreigners.get(j));
             }
-            System.out.println("╚════════════════════════════════════════════╝");
+
         }
     }
 }
